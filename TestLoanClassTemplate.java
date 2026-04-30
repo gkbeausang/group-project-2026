@@ -58,9 +58,10 @@ public class TestLoanClassTemplate {
 	  while (myLoanAmount >= myMonthlyPayment) {
 		  // to do A1 same as A2
 		  
+	  }
 	  if (myLoanAmount < myMonthlyPayment) {
 		  // to do B1 same as B2
-		       
+		      
 	  }
 	  double interestSaved = l.getTotalInterest() - totalInterest;
 	  /*
@@ -119,7 +120,6 @@ public class TestLoanClassTemplate {
 		  //2 add the interest paid this month to totalInterest
 		  //3 increment the month count
 		  
-		  		myMonthlyPayment= myLoanAmount*(1+myMonthlyInterestRate);
 		  /*1*/ interest = myLoanAmount*myMonthlyInterestRate;
 		  /*2*/ totalInterest += interest;
 		  /*3*/ month++;
