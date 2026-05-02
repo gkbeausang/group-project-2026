@@ -140,7 +140,6 @@ public class TestLoanClassTemplate {
 		  //2 add the interest paid this month to totalInterest
 		  //3 increment the month count
 		  
-		  		myMonthlyPayment= myLoanAmount*(1+myMonthlyInterestRate);
 		  /*1*/ interest = myLoanAmount*myMonthlyInterestRate;
 		  /*2*/ totalInterest += interest;
 		  /*3*/ month++;
