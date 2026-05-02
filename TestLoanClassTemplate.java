@@ -57,11 +57,31 @@ public class TestLoanClassTemplate {
 
 	  while (myLoanAmount >= myMonthlyPayment) {
 		  // to do A1 same as A2
+		  //1 calculate the new month's interest based on myLoanAmount and myMonthlyInterestRate
+		  //2 calculate the principal paid this month from myMonthlyPayment minus the new month's interest
+		  //3 calculate the new myLoanAmount after minus this month's principal
+		  //4 if it is the first month, also minus extra payment
+		  //5 add the interest paid this month to totalInterest
+		  //6 increment the month count
 		  
+		  /*1*/ interest = myLoanAmount*myMonthlyInterestRate;
+		  /*2*/ principal = myMonthlyPayment - interest;
+		  /*3*/ myLoanAmount -= principal;
+		  /*4*/ if (month == 0) {
+			  myLoanAmount -= extraPay;
+		  }
+		  /*5*/ totalInterest += interest;
+		  /*6*/ month++;
 	  }
 	  if (myLoanAmount < myMonthlyPayment) {
 		  // to do B1 same as B2
-		      
+		  //1 calculate the new month's interest based on myLoanAmount and myMonthlyInterestRate
+		  //2 add the interest paid this month to totalInterest
+		  //3 increment the month count
+		  
+		  /*1*/ interest = myLoanAmount*myMonthlyInterestRate;
+		  /*2*/ totalInterest += interest;
+		  /*3*/ month++;
 	  }
 	  double interestSaved = l.getTotalInterest() - totalInterest;
 	  /*
@@ -120,6 +140,7 @@ public class TestLoanClassTemplate {
 		  //2 add the interest paid this month to totalInterest
 		  //3 increment the month count
 		  
+		  		myMonthlyPayment= myLoanAmount*(1+myMonthlyInterestRate);
 		  /*1*/ interest = myLoanAmount*myMonthlyInterestRate;
 		  /*2*/ totalInterest += interest;
 		  /*3*/ month++;
